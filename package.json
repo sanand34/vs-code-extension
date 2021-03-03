@@ -10,7 +10,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:get-request.helloWorld"
+    "onCommand:get-request.helloWorld",
+    "onCommand:get-request.askQuestion"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -18,6 +19,10 @@
       {
         "command": "get-request.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "get-request.askQuestion",
+        "title": "Ask Question"
       }
     ]
   },

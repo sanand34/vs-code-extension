@@ -21,12 +21,16 @@ document.getElementById("myButton").onclick = function getInputValue() {
 
   var obj = httpGet(inputVal);
   var str = JSON.stringify(obj);
-  var block = " ___";
+  var block = " ----";
   for (var i = 0; i < str.length; i++) {
     if (/[{},]+/g.exec(str.charAt(i))) {
       if (/[{]+/g.exec(str.charAt(i))) {
         prevblock = block;
-        block = block + "____________________________";
+        if (/[,]+/g.exec(str.charAt(i - 1))) {
+          block = block;
+        } else {
+          block = block + "-----------";
+        }
       }
       if (/[}]+/g.exec(str.charAt(i))) {
         block = prevblock;

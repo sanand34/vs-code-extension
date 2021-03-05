@@ -27,7 +27,7 @@ export class HelloWorldPanel {
     // Otherwise, create a new panel.
     const panel = vscode.window.createWebviewPanel(
       HelloWorldPanel.viewType,
-      "VSinder",
+      "GetRequest",
       column || vscode.ViewColumn.One,
       {
         // Enable javascript in the webview
@@ -161,15 +161,13 @@ export class HelloWorldPanel {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<link href="${stylesResetUri}" rel="stylesheet">
 				<link href="${stylesMainUri}" rel="stylesheet">
-        <script nonce="${nonce}">
-            
-        </script>
+        <script nonce="${nonce}"></script>
 			</head>
-      <body>Hello World
-      <Input/>
-      <Button>Hello</Button>
+      <body>
+      <input type="text" placeholder="Type something..." id="myInput">
+      <button id="myButton"type="button" onclick="getInputValue();">Get Value</button>
 			</body>
-				
+      <script src="${scriptUri}" nonce="${nonce}">
 			</html>`;
   }
 }

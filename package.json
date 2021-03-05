@@ -18,7 +18,7 @@
     "commands": [
       {
         "command": "get-request.helloWorld",
-        "title": "Hello World"
+        "title": "Get Request"
       },
       {
         "command": "get-request.askQuestion",
@@ -46,5 +46,8 @@
     "mocha": "^8.2.1",
     "typescript": "^4.1.3",
     "vscode-test": "^1.5.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }

@@ -1,4 +1,4 @@
-![alt text](./untitled.gif)
+![alt text](./okuntitled.gif)
 # get-request README
 
 This is the README for your extension "get-request". After writing up a brief description, we recommend including the following sections.
